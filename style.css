@@ -49,7 +49,7 @@
 }
 
 .menu-container {
-  flex: 0.13;
+  flex: 0.10;
 
   /** 임시 CSS */
   border: 1px solid grey;
