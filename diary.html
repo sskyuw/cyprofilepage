@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>2021 MINI HOMEPAGE</title>
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="stylesheet" href="../static/layout.css"/>
+    <link rel="stylesheet href" href="../static/font.css"/>
+    <link rel="stylesheet href" href="../static/diary.css"/>
+  </head>
+  <body>
+    <div class="bookcover">
+      <div class="bookdot">
+        <div class="page">
+					<div class="profile-container">
+            <div class="header profile-title  font-neo">
+              TODAY<span class="color-red"> 28</span> | TOTAL 99999999
+            </div>
+            <div class="box profile-box">
+              <div class="profile-image">
+                <img
+                  class="profile-image-img"
+                  src="../static/images/lon.jpg"
+                  alt="프로필 이미지"
+                />
+              </div>
+              
+              <div class="profile-text font-kyobohand">
+                <hr>
+                런던이 가고싶네..... 시국이 끝나면 혼자 여행 가고 싶 ㄷ r
+              </div>
+              <div class="profile-username font-kyobohand">
+                <span style="color: #141f5e">SSKEI</span> (♂)
+              </div>
+
+              <div class="profile-dropdown">
+                <div class="dropdown-btn">
+                  <div class="dropdown-title">파도타기</div>
+                  <div class="dr-down"></div>
+                </div>
+
+              <div class="dropdown-content">
+                <a href="#" target="_blank">블로그</a>
+                
+              </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="content-container">
+            <div class="header content-title">
+              <div class="content-title-name">『 ™ SSKEI※의 λλΓ 이 월 드 ※ 』</div>
+              <div class="content-title-url">https://url주소/나중에입력</div>
+            </div>
+           
+       
+            <div class="box content-box">
+                <div class="date-box font-neo">
+                  <div class="today">02.30<br />TUE</div>
+                  <div class="date-list">
+                    <div class="date">1</div>
+                    <div class="date">2</div>
+                    <div class="date">3</div>
+                    <div class="date"><span class="color-blue">4</span></div>
+                    <div class="date"><span class="color-red">5</span></div>
+                    <div class="date">6</div>
+                    <div class="date">7</div>
+                    <div class="date">8</div>
+                    <div class="date">9</div>
+                    <div class="date">10</div>
+                    <div class="date"><span class="color-blue">11</span></div>
+                    <div class="date"><span class="color-red">12</span></div>
+                    <div class="date">13</div>
+                    <div class="date">14</div>
+                    <div class="date">15</div>
+                    <div class="date">16</div>
+                    <div class="date">17</div>
+                    <div class="date"><span class="color-blue">18</span></div>
+                    <div class="date"><span class="color-red">19</span></div>
+                    <div class="date">20</div>
+                    <div class="date">21</div>
+                    <div class="date">22</div>
+                    <div class="date">23</div>
+                    <div class="date">24</div>
+                    <div class="date"><span class="color-blue">25</span></div>
+                    <div class="date"><span class="color-red">26</span></div>
+                    <div class="date">27</div>
+                    <div class="date">28</div>
+                    <div class="date">29</div>
+                    <div class="date">30</div>
+                  </div>
+                </div>
+                <div class="scroll-box">
+                  <div class="diary-box">
+                    <div class="diary-date font-neo">2021.07.20 화 16:30</div>
+                    <div class="diary-text font-kyobohand">
+                     게으르지 말고 꾸준히 공부를 하자 
+                    </div>
+                  </div>
+                  <div class="diary-box">
+                    <div class="diary-date font-neo">2021.07.20 화 15:29</div>
+                    <div class="diary-text font-kyobohand">
+                     
+                        이 시간에 안자는분? ㅋㅋㅋㅋㅋ <br>
+                        쪽지
+                    </div>
+                  </div>
+                  <div class="diary-box">
+                    <div class="diary-date font-neo">2021.07.21 수 12:19</div>
+                    <div class="diary-text font-kyobohand">
+                      
+                        나랑 놀사람??
+                    </div>
+                  </div>
+  
+                
+                  <div class="button-box">
+                    <button class="diary-button font-neo" onclick="getTextFile()">
+                      <i class="fas fa-lock"></i> sskei의 비밀일기 보기
+                    </button>
+                  </div>
+                  <div class="diary-box" id="secret-box">
+                    <div class="diary-date">sskei의 비밀 일기</div>
+                    <div class="diary-text font-kyobohand" id="secret-diary"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <div class="menu-container">
+          <a href="../static/home.html">홈</a>
+          <a href="../static/diary.html">다이어리</a>
+          <a href="../static/photo.html">사진관</a>
+          <a href="../static/home.html">게시판</a>
+          <a href="../static/home.html">방명록</a>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        function getTextFile() {
+          var input = document.createElement("input");
+          input.type = "file";
+          input.accept = "text/plain";
+          input.onchange = function (event) {
+            processFile(event.target.files[0]);
+          };
+          input.click();
+        }
+  
+        function processFile(file) {
+          var reader = new FileReader();
+          reader.readAsText(file, "utf-8");
+  
+          reader.onload = function () {
+            document.getElementById("secret-diary").innerText = reader.result;
+            document.getElementById("secret-box").style.display = "block";
+          };
+        }
+      </script>
+  </body>
+</html>
