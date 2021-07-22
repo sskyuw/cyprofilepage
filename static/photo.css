@@ -1,0 +1,107 @@
+::-webkit-scrollbar {
+	width: 15px;
+	background-color: #eeeeee;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #cdcdcd;	
+}
+
+::-webkit-scrollbar-button {
+  background-color: #cdcdcd ;
+  width: 5px;
+  height: 10px;
+}
+
+
+/*컨텐츠 외부*/
+.content {
+  align-items: center;
+  padding-bottom: 20px;
+  overflow: auto;
+}
+
+.photo-container { 
+    display:flex;
+    flex-direction:column;
+    overflow: auto;
+    padding:10px;
+}
+
+.photo-title_1 {
+    background-color: #eeeeee;
+    font-size:16px;
+    font-family: '모리스9';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 28px;
+    border-top:1px #cdcdcd solid;
+    border-bottom:1px #cdcdcd dotted;
+    padding-left:50px;
+
+}
+
+.photo-title_2 {
+    font-size:14px;
+    font-family: '모리스9';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 28px;
+    padding-right:5px;
+} 
+
+.photo-title_2>span {
+  color:#2a34b7;
+  padding-left:0;
+}
+
+.subject {
+  flex:1; 
+  text-align: center;
+}
+
+.copy { 
+  float:right;
+  background-color: white;  
+  font-size:12px; 
+  padding:2px; 
+  margin-right:5px;
+  line-height:16px; 
+  border:1px #cdcdcd solid;
+  border-radius: 4px;}
+
+.photo-content {
+  flex:none; 
+  line-height:25px; 
+  margin-bottom:20px;
+}
+
+.photo-content>img {
+  width:100%;
+  margin-bottom: 5px;
+}  
+
+
+/*메뉴*/
+.menu-container>a{
+    flex:0;
+    text-decoration: none; 
+    border: 1px solid #cdcdcd; 
+    border-left:none; 
+    padding:10px; 
+    margin-top:5px; 
+    background-color: #000000;
+    color:white;
+    align-items:center;
+    border-radius: 0 9px 9px 0;
+    text-align: center;
+
+}
+
+.menu-container>a:hover {
+    background-color: #28778c; 
+    border-left:white;
+}
+

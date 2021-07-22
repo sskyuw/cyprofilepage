@@ -1,0 +1,99 @@
+.content-box {
+    position: relative;
+  }
+  
+  .date-box {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    height: 3rem;
+  
+    border: 1px solid #e7e7e7;
+  
+    display: flex;
+    align-items: center;
+  }
+  
+  .today {
+    flex: 0 0 2rem;
+    margin: 0 1rem;
+    text-align: center;
+    color: #3b87ab;
+    font-weight: 700;
+  }
+  
+  .date-list {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .date {
+    flex: 0 0 1.5rem;
+    color: #707070;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .scroll-box {
+    position: absolute;
+    margin-top: 4rem;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    overflow: auto;
+  }
+  
+  .color-blue {
+    color: blue;
+  }
+  
+  .diary-box {
+    border: 1px solid #e7e7e7;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .diary-date {
+    font-size: 0.8rem;
+    color: #3b87ab;
+    margin-bottom: 1rem;
+  }
+  
+  .diary-text {
+    text-align: center;
+  }
+  
+  .button-box {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .diary-button {
+    margin-top: 1rem;
+    background: #fff;
+    color: #fff;
+    padding: 1rem;
+    cursor: pointer;
+  
+    transition: 800ms ease all;
+    border: none;
+  }
+  
+  .diary-button:hover {
+    background: #1aab8a;
+    color: #fff;
+  }
+  
+  .fas {
+    margin-right: 0.5rem;
+    font-size: 0.5rem;
+  }
+  
+  /* 비밀 일기 */
+  #secret-box {
+    display: none;
+  }
