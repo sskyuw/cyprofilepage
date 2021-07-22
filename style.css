@@ -49,7 +49,7 @@
 }
 
 .menu-container {
-  flex: 0.15;
+  flex: 0.13;
 
   /** 임시 CSS */
   border: 1px solid grey;
@@ -62,9 +62,9 @@
 
 .box {
   background-color: white;
-  
+
   flex: 3;
-  border-radius: 10px;
+  border-radius: 11px;
   border: 1px solid #cdcdcd;
 }
 
